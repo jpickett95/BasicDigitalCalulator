@@ -32,7 +32,6 @@ namespace Basic_Digital_Calculator
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.ButtonsPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.DisplayPanel = new System.Windows.Forms.Panel();
             this.ModuloDivsionButton = new System.Windows.Forms.Button();
             this.ClearEntryButton = new System.Windows.Forms.Button();
             this.ClearButton = new System.Windows.Forms.Button();
@@ -57,6 +56,7 @@ namespace Basic_Digital_Calculator
             this.ZeroButton = new System.Windows.Forms.Button();
             this.PeriodButton = new System.Windows.Forms.Button();
             this.EqualsButton = new System.Windows.Forms.Button();
+            this.DisplayPanel = new System.Windows.Forms.Panel();
             this.FormulaStatusStrip = new System.Windows.Forms.StatusStrip();
             this.DeleteToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.ButtonsPanel.SuspendLayout();
@@ -105,21 +105,12 @@ namespace Basic_Digital_Calculator
             this.ButtonsPanel.Size = new System.Drawing.Size(394, 348);
             this.ButtonsPanel.TabIndex = 0;
             // 
-            // DisplayPanel
-            // 
-            this.DisplayPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.DisplayPanel.Location = new System.Drawing.Point(12, 12);
-            this.DisplayPanel.Name = "DisplayPanel";
-            this.DisplayPanel.Size = new System.Drawing.Size(394, 72);
-            this.DisplayPanel.TabIndex = 1;
-            this.DisplayPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.DisplayPanel_Paint);
-            // 
             // ModuloDivsionButton
             // 
             this.ModuloDivsionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ModuloDivsionButton.Location = new System.Drawing.Point(3, 3);
             this.ModuloDivsionButton.Name = "ModuloDivsionButton";
-            this.ModuloDivsionButton.Size = new System.Drawing.Size(92, 52);
+            this.ModuloDivsionButton.Size = new System.Drawing.Size(92, 51);
             this.ModuloDivsionButton.TabIndex = 0;
             this.ModuloDivsionButton.Text = "%";
             this.ModuloDivsionButton.UseVisualStyleBackColor = true;
@@ -129,7 +120,7 @@ namespace Basic_Digital_Calculator
             this.ClearEntryButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ClearEntryButton.Location = new System.Drawing.Point(101, 3);
             this.ClearEntryButton.Name = "ClearEntryButton";
-            this.ClearEntryButton.Size = new System.Drawing.Size(92, 52);
+            this.ClearEntryButton.Size = new System.Drawing.Size(92, 51);
             this.ClearEntryButton.TabIndex = 1;
             this.ClearEntryButton.Text = "CE";
             this.ClearEntryButton.UseVisualStyleBackColor = true;
@@ -139,7 +130,7 @@ namespace Basic_Digital_Calculator
             this.ClearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ClearButton.Location = new System.Drawing.Point(199, 3);
             this.ClearButton.Name = "ClearButton";
-            this.ClearButton.Size = new System.Drawing.Size(92, 52);
+            this.ClearButton.Size = new System.Drawing.Size(92, 51);
             this.ClearButton.TabIndex = 2;
             this.ClearButton.Text = "C";
             this.ClearButton.UseVisualStyleBackColor = true;
@@ -152,7 +143,7 @@ namespace Basic_Digital_Calculator
             this.DeleteButton.Image = ((System.Drawing.Image)(resources.GetObject("DeleteButton.Image")));
             this.DeleteButton.Location = new System.Drawing.Point(297, 3);
             this.DeleteButton.Name = "DeleteButton";
-            this.DeleteButton.Size = new System.Drawing.Size(94, 52);
+            this.DeleteButton.Size = new System.Drawing.Size(94, 51);
             this.DeleteButton.TabIndex = 3;
             this.DeleteButton.Tag = "Delete";
             this.DeleteToolTip.SetToolTip(this.DeleteButton, "Delete");
@@ -161,9 +152,9 @@ namespace Basic_Digital_Calculator
             // OneDividedByEntryButton
             // 
             this.OneDividedByEntryButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OneDividedByEntryButton.Location = new System.Drawing.Point(3, 61);
+            this.OneDividedByEntryButton.Location = new System.Drawing.Point(3, 60);
             this.OneDividedByEntryButton.Name = "OneDividedByEntryButton";
-            this.OneDividedByEntryButton.Size = new System.Drawing.Size(92, 52);
+            this.OneDividedByEntryButton.Size = new System.Drawing.Size(92, 51);
             this.OneDividedByEntryButton.TabIndex = 4;
             this.OneDividedByEntryButton.Text = "1/x";
             this.OneDividedByEntryButton.UseVisualStyleBackColor = true;
@@ -171,9 +162,9 @@ namespace Basic_Digital_Calculator
             // EntrySquaredButton
             // 
             this.EntrySquaredButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EntrySquaredButton.Location = new System.Drawing.Point(101, 61);
+            this.EntrySquaredButton.Location = new System.Drawing.Point(101, 60);
             this.EntrySquaredButton.Name = "EntrySquaredButton";
-            this.EntrySquaredButton.Size = new System.Drawing.Size(92, 52);
+            this.EntrySquaredButton.Size = new System.Drawing.Size(92, 51);
             this.EntrySquaredButton.TabIndex = 5;
             this.EntrySquaredButton.Text = "x ^2";
             this.EntrySquaredButton.UseVisualStyleBackColor = true;
@@ -181,9 +172,9 @@ namespace Basic_Digital_Calculator
             // SquareRootOfEntryButton
             // 
             this.SquareRootOfEntryButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SquareRootOfEntryButton.Location = new System.Drawing.Point(199, 61);
+            this.SquareRootOfEntryButton.Location = new System.Drawing.Point(199, 60);
             this.SquareRootOfEntryButton.Name = "SquareRootOfEntryButton";
-            this.SquareRootOfEntryButton.Size = new System.Drawing.Size(92, 52);
+            this.SquareRootOfEntryButton.Size = new System.Drawing.Size(92, 51);
             this.SquareRootOfEntryButton.TabIndex = 6;
             this.SquareRootOfEntryButton.Text = "√x";
             this.SquareRootOfEntryButton.UseVisualStyleBackColor = true;
@@ -191,9 +182,9 @@ namespace Basic_Digital_Calculator
             // DivideButton
             // 
             this.DivideButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DivideButton.Location = new System.Drawing.Point(297, 61);
+            this.DivideButton.Location = new System.Drawing.Point(297, 60);
             this.DivideButton.Name = "DivideButton";
-            this.DivideButton.Size = new System.Drawing.Size(94, 52);
+            this.DivideButton.Size = new System.Drawing.Size(94, 51);
             this.DivideButton.TabIndex = 7;
             this.DivideButton.Text = "÷";
             this.DivideButton.UseVisualStyleBackColor = true;
@@ -201,9 +192,9 @@ namespace Basic_Digital_Calculator
             // SevenButton
             // 
             this.SevenButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SevenButton.Location = new System.Drawing.Point(3, 119);
+            this.SevenButton.Location = new System.Drawing.Point(3, 117);
             this.SevenButton.Name = "SevenButton";
-            this.SevenButton.Size = new System.Drawing.Size(92, 52);
+            this.SevenButton.Size = new System.Drawing.Size(92, 51);
             this.SevenButton.TabIndex = 8;
             this.SevenButton.Text = "7";
             this.SevenButton.UseVisualStyleBackColor = true;
@@ -211,9 +202,9 @@ namespace Basic_Digital_Calculator
             // EightButton
             // 
             this.EightButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EightButton.Location = new System.Drawing.Point(101, 119);
+            this.EightButton.Location = new System.Drawing.Point(101, 117);
             this.EightButton.Name = "EightButton";
-            this.EightButton.Size = new System.Drawing.Size(92, 52);
+            this.EightButton.Size = new System.Drawing.Size(92, 51);
             this.EightButton.TabIndex = 9;
             this.EightButton.Text = "8";
             this.EightButton.UseVisualStyleBackColor = true;
@@ -221,9 +212,9 @@ namespace Basic_Digital_Calculator
             // NineButton
             // 
             this.NineButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NineButton.Location = new System.Drawing.Point(199, 119);
+            this.NineButton.Location = new System.Drawing.Point(199, 117);
             this.NineButton.Name = "NineButton";
-            this.NineButton.Size = new System.Drawing.Size(92, 52);
+            this.NineButton.Size = new System.Drawing.Size(92, 51);
             this.NineButton.TabIndex = 10;
             this.NineButton.Text = "9";
             this.NineButton.UseVisualStyleBackColor = true;
@@ -231,9 +222,9 @@ namespace Basic_Digital_Calculator
             // MultiplyButton
             // 
             this.MultiplyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MultiplyButton.Location = new System.Drawing.Point(297, 119);
+            this.MultiplyButton.Location = new System.Drawing.Point(297, 117);
             this.MultiplyButton.Name = "MultiplyButton";
-            this.MultiplyButton.Size = new System.Drawing.Size(94, 52);
+            this.MultiplyButton.Size = new System.Drawing.Size(94, 51);
             this.MultiplyButton.TabIndex = 11;
             this.MultiplyButton.Text = "x";
             this.MultiplyButton.UseVisualStyleBackColor = true;
@@ -241,9 +232,9 @@ namespace Basic_Digital_Calculator
             // FourButton
             // 
             this.FourButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FourButton.Location = new System.Drawing.Point(3, 177);
+            this.FourButton.Location = new System.Drawing.Point(3, 174);
             this.FourButton.Name = "FourButton";
-            this.FourButton.Size = new System.Drawing.Size(92, 52);
+            this.FourButton.Size = new System.Drawing.Size(92, 51);
             this.FourButton.TabIndex = 12;
             this.FourButton.Text = "4";
             this.FourButton.UseVisualStyleBackColor = true;
@@ -251,9 +242,9 @@ namespace Basic_Digital_Calculator
             // FiveButton
             // 
             this.FiveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FiveButton.Location = new System.Drawing.Point(101, 177);
+            this.FiveButton.Location = new System.Drawing.Point(101, 174);
             this.FiveButton.Name = "FiveButton";
-            this.FiveButton.Size = new System.Drawing.Size(92, 52);
+            this.FiveButton.Size = new System.Drawing.Size(92, 51);
             this.FiveButton.TabIndex = 13;
             this.FiveButton.Text = "5";
             this.FiveButton.UseVisualStyleBackColor = true;
@@ -261,9 +252,9 @@ namespace Basic_Digital_Calculator
             // SixButton
             // 
             this.SixButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SixButton.Location = new System.Drawing.Point(199, 177);
+            this.SixButton.Location = new System.Drawing.Point(199, 174);
             this.SixButton.Name = "SixButton";
-            this.SixButton.Size = new System.Drawing.Size(92, 52);
+            this.SixButton.Size = new System.Drawing.Size(92, 51);
             this.SixButton.TabIndex = 14;
             this.SixButton.Text = "6";
             this.SixButton.UseVisualStyleBackColor = true;
@@ -271,9 +262,9 @@ namespace Basic_Digital_Calculator
             // SubtractButton
             // 
             this.SubtractButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SubtractButton.Location = new System.Drawing.Point(297, 177);
+            this.SubtractButton.Location = new System.Drawing.Point(297, 174);
             this.SubtractButton.Name = "SubtractButton";
-            this.SubtractButton.Size = new System.Drawing.Size(94, 52);
+            this.SubtractButton.Size = new System.Drawing.Size(94, 51);
             this.SubtractButton.TabIndex = 15;
             this.SubtractButton.Text = "-";
             this.SubtractButton.UseVisualStyleBackColor = true;
@@ -281,19 +272,20 @@ namespace Basic_Digital_Calculator
             // OneButton
             // 
             this.OneButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OneButton.Location = new System.Drawing.Point(3, 235);
+            this.OneButton.Location = new System.Drawing.Point(3, 231);
             this.OneButton.Name = "OneButton";
-            this.OneButton.Size = new System.Drawing.Size(92, 52);
+            this.OneButton.Size = new System.Drawing.Size(92, 51);
             this.OneButton.TabIndex = 16;
             this.OneButton.Text = "1";
             this.OneButton.UseVisualStyleBackColor = true;
+            this.OneButton.Click += new System.EventHandler(this.OneButton_Click);
             // 
             // TwoButton
             // 
             this.TwoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TwoButton.Location = new System.Drawing.Point(101, 235);
+            this.TwoButton.Location = new System.Drawing.Point(101, 231);
             this.TwoButton.Name = "TwoButton";
-            this.TwoButton.Size = new System.Drawing.Size(92, 52);
+            this.TwoButton.Size = new System.Drawing.Size(92, 51);
             this.TwoButton.TabIndex = 17;
             this.TwoButton.Text = "2";
             this.TwoButton.UseVisualStyleBackColor = true;
@@ -301,9 +293,9 @@ namespace Basic_Digital_Calculator
             // ThreeButton
             // 
             this.ThreeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ThreeButton.Location = new System.Drawing.Point(199, 235);
+            this.ThreeButton.Location = new System.Drawing.Point(199, 231);
             this.ThreeButton.Name = "ThreeButton";
-            this.ThreeButton.Size = new System.Drawing.Size(92, 52);
+            this.ThreeButton.Size = new System.Drawing.Size(92, 51);
             this.ThreeButton.TabIndex = 18;
             this.ThreeButton.Text = "3";
             this.ThreeButton.UseVisualStyleBackColor = true;
@@ -311,9 +303,9 @@ namespace Basic_Digital_Calculator
             // AddButton
             // 
             this.AddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddButton.Location = new System.Drawing.Point(297, 235);
+            this.AddButton.Location = new System.Drawing.Point(297, 231);
             this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(94, 52);
+            this.AddButton.Size = new System.Drawing.Size(94, 51);
             this.AddButton.TabIndex = 19;
             this.AddButton.Text = "+";
             this.AddButton.UseVisualStyleBackColor = true;
@@ -321,7 +313,7 @@ namespace Basic_Digital_Calculator
             // NegateButton
             // 
             this.NegateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NegateButton.Location = new System.Drawing.Point(3, 293);
+            this.NegateButton.Location = new System.Drawing.Point(3, 288);
             this.NegateButton.Name = "NegateButton";
             this.NegateButton.Size = new System.Drawing.Size(92, 52);
             this.NegateButton.TabIndex = 20;
@@ -331,7 +323,7 @@ namespace Basic_Digital_Calculator
             // ZeroButton
             // 
             this.ZeroButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ZeroButton.Location = new System.Drawing.Point(101, 293);
+            this.ZeroButton.Location = new System.Drawing.Point(101, 288);
             this.ZeroButton.Name = "ZeroButton";
             this.ZeroButton.Size = new System.Drawing.Size(92, 52);
             this.ZeroButton.TabIndex = 21;
@@ -341,7 +333,7 @@ namespace Basic_Digital_Calculator
             // PeriodButton
             // 
             this.PeriodButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PeriodButton.Location = new System.Drawing.Point(199, 293);
+            this.PeriodButton.Location = new System.Drawing.Point(199, 288);
             this.PeriodButton.Name = "PeriodButton";
             this.PeriodButton.Size = new System.Drawing.Size(92, 52);
             this.PeriodButton.TabIndex = 22;
@@ -351,12 +343,21 @@ namespace Basic_Digital_Calculator
             // EqualsButton
             // 
             this.EqualsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EqualsButton.Location = new System.Drawing.Point(297, 293);
+            this.EqualsButton.Location = new System.Drawing.Point(297, 288);
             this.EqualsButton.Name = "EqualsButton";
             this.EqualsButton.Size = new System.Drawing.Size(94, 52);
             this.EqualsButton.TabIndex = 23;
             this.EqualsButton.Text = "=";
             this.EqualsButton.UseVisualStyleBackColor = true;
+            // 
+            // DisplayPanel
+            // 
+            this.DisplayPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.DisplayPanel.Location = new System.Drawing.Point(12, 12);
+            this.DisplayPanel.Name = "DisplayPanel";
+            this.DisplayPanel.Size = new System.Drawing.Size(394, 72);
+            this.DisplayPanel.TabIndex = 1;
+            this.DisplayPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.DisplayPanel_Paint);
             // 
             // FormulaStatusStrip
             // 

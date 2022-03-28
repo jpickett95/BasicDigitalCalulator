@@ -12,7 +12,8 @@ namespace Basic_Digital_Calculator
 {
     public partial class Form1 : Form
     {
-        public string CurrentEntry = "0";
+        // variable 
+        public string currentEntry = "0"; 
 
         public Form1()
         {
@@ -27,7 +28,14 @@ namespace Basic_Digital_Calculator
             stringFormat.Alignment = StringAlignment.Far;
             stringFormat.LineAlignment = StringAlignment.Far;
 
-            e.Graphics.DrawString(CurrentEntry.ToString(), font, Brushes.Black, DisplayPanel.ClientRectangle, stringFormat);
+            long entryToLong = long.Parse(currentEntry);
+            e.Graphics.DrawString(entryToLong.ToString(), font, Brushes.Black, DisplayPanel.ClientRectangle, stringFormat);
+        }
+
+        private void OneButton_Click(object sender, EventArgs e)
+        {
+            currentEntry += "1";
+            DisplayPanel.Invalidate();
         }
     }
 }
