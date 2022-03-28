@@ -12,7 +12,7 @@ namespace Basic_Digital_Calculator
 {
     public partial class Form1 : Form
     {
-        public long CurrentEntry = 0;
+        public string CurrentEntry = "0";
 
         public Form1()
         {
