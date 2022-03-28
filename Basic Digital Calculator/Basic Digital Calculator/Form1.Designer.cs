@@ -55,6 +55,7 @@ namespace Basic_Digital_Calculator
             this.ZeroButton = new System.Windows.Forms.Button();
             this.PeriodButton = new System.Windows.Forms.Button();
             this.EqualsButton = new System.Windows.Forms.Button();
+            this.FormulaStatusStrip = new System.Windows.Forms.StatusStrip();
             this.ButtonsPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -324,11 +325,20 @@ namespace Basic_Digital_Calculator
             this.EqualsButton.Text = "=";
             this.EqualsButton.UseVisualStyleBackColor = true;
             // 
+            // FormulaStatusStrip
+            // 
+            this.FormulaStatusStrip.Location = new System.Drawing.Point(0, 450);
+            this.FormulaStatusStrip.Name = "FormulaStatusStrip";
+            this.FormulaStatusStrip.Size = new System.Drawing.Size(418, 22);
+            this.FormulaStatusStrip.TabIndex = 2;
+            this.FormulaStatusStrip.Text = "statusStrip1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(418, 450);
+            this.ClientSize = new System.Drawing.Size(418, 472);
+            this.Controls.Add(this.FormulaStatusStrip);
             this.Controls.Add(this.DisplayPanel);
             this.Controls.Add(this.ButtonsPanel);
             this.Name = "Form1";
@@ -336,6 +346,7 @@ namespace Basic_Digital_Calculator
             this.Text = "Form1";
             this.ButtonsPanel.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -367,6 +378,7 @@ namespace Basic_Digital_Calculator
         private System.Windows.Forms.Button PeriodButton;
         private System.Windows.Forms.Button EqualsButton;
         private System.Windows.Forms.Panel DisplayPanel;
+        private System.Windows.Forms.StatusStrip FormulaStatusStrip;
     }
 }
 
