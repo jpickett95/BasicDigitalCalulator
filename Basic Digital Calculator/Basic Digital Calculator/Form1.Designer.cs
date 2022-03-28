@@ -198,6 +198,7 @@ namespace Basic_Digital_Calculator
             this.SevenButton.TabIndex = 8;
             this.SevenButton.Text = "7";
             this.SevenButton.UseVisualStyleBackColor = true;
+            this.SevenButton.Click += new System.EventHandler(this.SevenButton_Click);
             // 
             // EightButton
             // 
@@ -208,6 +209,7 @@ namespace Basic_Digital_Calculator
             this.EightButton.TabIndex = 9;
             this.EightButton.Text = "8";
             this.EightButton.UseVisualStyleBackColor = true;
+            this.EightButton.Click += new System.EventHandler(this.EightButton_Click);
             // 
             // NineButton
             // 
@@ -218,6 +220,7 @@ namespace Basic_Digital_Calculator
             this.NineButton.TabIndex = 10;
             this.NineButton.Text = "9";
             this.NineButton.UseVisualStyleBackColor = true;
+            this.NineButton.Click += new System.EventHandler(this.NineButton_Click);
             // 
             // MultiplyButton
             // 
@@ -238,6 +241,7 @@ namespace Basic_Digital_Calculator
             this.FourButton.TabIndex = 12;
             this.FourButton.Text = "4";
             this.FourButton.UseVisualStyleBackColor = true;
+            this.FourButton.Click += new System.EventHandler(this.FourButton_Click);
             // 
             // FiveButton
             // 
@@ -248,6 +252,7 @@ namespace Basic_Digital_Calculator
             this.FiveButton.TabIndex = 13;
             this.FiveButton.Text = "5";
             this.FiveButton.UseVisualStyleBackColor = true;
+            this.FiveButton.Click += new System.EventHandler(this.FiveButton_Click);
             // 
             // SixButton
             // 
@@ -258,6 +263,7 @@ namespace Basic_Digital_Calculator
             this.SixButton.TabIndex = 14;
             this.SixButton.Text = "6";
             this.SixButton.UseVisualStyleBackColor = true;
+            this.SixButton.Click += new System.EventHandler(this.SixButton_Click);
             // 
             // SubtractButton
             // 
@@ -289,6 +295,7 @@ namespace Basic_Digital_Calculator
             this.TwoButton.TabIndex = 17;
             this.TwoButton.Text = "2";
             this.TwoButton.UseVisualStyleBackColor = true;
+            this.TwoButton.Click += new System.EventHandler(this.TwoButton_Click);
             // 
             // ThreeButton
             // 
@@ -299,6 +306,7 @@ namespace Basic_Digital_Calculator
             this.ThreeButton.TabIndex = 18;
             this.ThreeButton.Text = "3";
             this.ThreeButton.UseVisualStyleBackColor = true;
+            this.ThreeButton.Click += new System.EventHandler(this.ThreeButton_Click);
             // 
             // AddButton
             // 
@@ -329,6 +337,7 @@ namespace Basic_Digital_Calculator
             this.ZeroButton.TabIndex = 21;
             this.ZeroButton.Text = "0";
             this.ZeroButton.UseVisualStyleBackColor = true;
+            this.ZeroButton.Click += new System.EventHandler(this.ZeroButton_Click);
             // 
             // PeriodButton
             // 
