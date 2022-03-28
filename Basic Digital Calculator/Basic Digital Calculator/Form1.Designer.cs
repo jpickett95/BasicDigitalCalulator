@@ -111,6 +111,7 @@ namespace Basic_Digital_Calculator
             // 
             // ModuloDivsionButton
             // 
+            this.ModuloDivsionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ModuloDivsionButton.Location = new System.Drawing.Point(3, 3);
             this.ModuloDivsionButton.Name = "ModuloDivsionButton";
             this.ModuloDivsionButton.Size = new System.Drawing.Size(92, 52);
@@ -120,51 +121,57 @@ namespace Basic_Digital_Calculator
             // 
             // ClearEntryButton
             // 
+            this.ClearEntryButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ClearEntryButton.Location = new System.Drawing.Point(101, 3);
             this.ClearEntryButton.Name = "ClearEntryButton";
             this.ClearEntryButton.Size = new System.Drawing.Size(92, 52);
             this.ClearEntryButton.TabIndex = 1;
-            this.ClearEntryButton.Text = "Clear Entry";
+            this.ClearEntryButton.Text = "CE";
             this.ClearEntryButton.UseVisualStyleBackColor = true;
             // 
             // ClearButton
             // 
+            this.ClearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ClearButton.Location = new System.Drawing.Point(199, 3);
             this.ClearButton.Name = "ClearButton";
             this.ClearButton.Size = new System.Drawing.Size(92, 52);
             this.ClearButton.TabIndex = 2;
-            this.ClearButton.Text = "Clear";
+            this.ClearButton.Text = "C";
             this.ClearButton.UseVisualStyleBackColor = true;
             // 
             // DeleteButton
             // 
+            this.DeleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeleteButton.Location = new System.Drawing.Point(297, 3);
             this.DeleteButton.Name = "DeleteButton";
             this.DeleteButton.Size = new System.Drawing.Size(94, 52);
             this.DeleteButton.TabIndex = 3;
-            this.DeleteButton.Text = "Delete";
+            this.DeleteButton.Text = "Del";
             this.DeleteButton.UseVisualStyleBackColor = true;
             // 
             // OneDividedByEntryButton
             // 
+            this.OneDividedByEntryButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OneDividedByEntryButton.Location = new System.Drawing.Point(3, 61);
             this.OneDividedByEntryButton.Name = "OneDividedByEntryButton";
             this.OneDividedByEntryButton.Size = new System.Drawing.Size(92, 52);
             this.OneDividedByEntryButton.TabIndex = 4;
-            this.OneDividedByEntryButton.Text = "1/X";
+            this.OneDividedByEntryButton.Text = "1/x";
             this.OneDividedByEntryButton.UseVisualStyleBackColor = true;
             // 
             // EntrySquaredButton
             // 
+            this.EntrySquaredButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EntrySquaredButton.Location = new System.Drawing.Point(101, 61);
             this.EntrySquaredButton.Name = "EntrySquaredButton";
             this.EntrySquaredButton.Size = new System.Drawing.Size(92, 52);
             this.EntrySquaredButton.TabIndex = 5;
-            this.EntrySquaredButton.Text = "X ^2";
+            this.EntrySquaredButton.Text = "x ^2";
             this.EntrySquaredButton.UseVisualStyleBackColor = true;
             // 
             // SquareRootOfEntryButton
             // 
+            this.SquareRootOfEntryButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SquareRootOfEntryButton.Location = new System.Drawing.Point(199, 61);
             this.SquareRootOfEntryButton.Name = "SquareRootOfEntryButton";
             this.SquareRootOfEntryButton.Size = new System.Drawing.Size(92, 52);
@@ -174,6 +181,7 @@ namespace Basic_Digital_Calculator
             // 
             // DivideButton
             // 
+            this.DivideButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DivideButton.Location = new System.Drawing.Point(297, 61);
             this.DivideButton.Name = "DivideButton";
             this.DivideButton.Size = new System.Drawing.Size(94, 52);
@@ -183,6 +191,7 @@ namespace Basic_Digital_Calculator
             // 
             // SevenButton
             // 
+            this.SevenButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SevenButton.Location = new System.Drawing.Point(3, 119);
             this.SevenButton.Name = "SevenButton";
             this.SevenButton.Size = new System.Drawing.Size(92, 52);
@@ -192,6 +201,7 @@ namespace Basic_Digital_Calculator
             // 
             // EightButton
             // 
+            this.EightButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EightButton.Location = new System.Drawing.Point(101, 119);
             this.EightButton.Name = "EightButton";
             this.EightButton.Size = new System.Drawing.Size(92, 52);
@@ -201,6 +211,7 @@ namespace Basic_Digital_Calculator
             // 
             // NineButton
             // 
+            this.NineButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NineButton.Location = new System.Drawing.Point(199, 119);
             this.NineButton.Name = "NineButton";
             this.NineButton.Size = new System.Drawing.Size(92, 52);
@@ -210,15 +221,17 @@ namespace Basic_Digital_Calculator
             // 
             // MultiplyButton
             // 
+            this.MultiplyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MultiplyButton.Location = new System.Drawing.Point(297, 119);
             this.MultiplyButton.Name = "MultiplyButton";
             this.MultiplyButton.Size = new System.Drawing.Size(94, 52);
             this.MultiplyButton.TabIndex = 11;
-            this.MultiplyButton.Text = "X";
+            this.MultiplyButton.Text = "x";
             this.MultiplyButton.UseVisualStyleBackColor = true;
             // 
             // FourButton
             // 
+            this.FourButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FourButton.Location = new System.Drawing.Point(3, 177);
             this.FourButton.Name = "FourButton";
             this.FourButton.Size = new System.Drawing.Size(92, 52);
@@ -228,6 +241,7 @@ namespace Basic_Digital_Calculator
             // 
             // FiveButton
             // 
+            this.FiveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FiveButton.Location = new System.Drawing.Point(101, 177);
             this.FiveButton.Name = "FiveButton";
             this.FiveButton.Size = new System.Drawing.Size(92, 52);
@@ -237,6 +251,7 @@ namespace Basic_Digital_Calculator
             // 
             // SixButton
             // 
+            this.SixButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SixButton.Location = new System.Drawing.Point(199, 177);
             this.SixButton.Name = "SixButton";
             this.SixButton.Size = new System.Drawing.Size(92, 52);
@@ -246,6 +261,7 @@ namespace Basic_Digital_Calculator
             // 
             // SubtractButton
             // 
+            this.SubtractButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SubtractButton.Location = new System.Drawing.Point(297, 177);
             this.SubtractButton.Name = "SubtractButton";
             this.SubtractButton.Size = new System.Drawing.Size(94, 52);
@@ -255,6 +271,7 @@ namespace Basic_Digital_Calculator
             // 
             // OneButton
             // 
+            this.OneButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OneButton.Location = new System.Drawing.Point(3, 235);
             this.OneButton.Name = "OneButton";
             this.OneButton.Size = new System.Drawing.Size(92, 52);
@@ -264,6 +281,7 @@ namespace Basic_Digital_Calculator
             // 
             // TwoButton
             // 
+            this.TwoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TwoButton.Location = new System.Drawing.Point(101, 235);
             this.TwoButton.Name = "TwoButton";
             this.TwoButton.Size = new System.Drawing.Size(92, 52);
@@ -273,6 +291,7 @@ namespace Basic_Digital_Calculator
             // 
             // ThreeButton
             // 
+            this.ThreeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ThreeButton.Location = new System.Drawing.Point(199, 235);
             this.ThreeButton.Name = "ThreeButton";
             this.ThreeButton.Size = new System.Drawing.Size(92, 52);
@@ -282,6 +301,7 @@ namespace Basic_Digital_Calculator
             // 
             // AddButton
             // 
+            this.AddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddButton.Location = new System.Drawing.Point(297, 235);
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(94, 52);
@@ -291,6 +311,7 @@ namespace Basic_Digital_Calculator
             // 
             // NegateButton
             // 
+            this.NegateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NegateButton.Location = new System.Drawing.Point(3, 293);
             this.NegateButton.Name = "NegateButton";
             this.NegateButton.Size = new System.Drawing.Size(92, 52);
@@ -300,6 +321,7 @@ namespace Basic_Digital_Calculator
             // 
             // ZeroButton
             // 
+            this.ZeroButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ZeroButton.Location = new System.Drawing.Point(101, 293);
             this.ZeroButton.Name = "ZeroButton";
             this.ZeroButton.Size = new System.Drawing.Size(92, 52);
@@ -309,6 +331,7 @@ namespace Basic_Digital_Calculator
             // 
             // PeriodButton
             // 
+            this.PeriodButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PeriodButton.Location = new System.Drawing.Point(199, 293);
             this.PeriodButton.Name = "PeriodButton";
             this.PeriodButton.Size = new System.Drawing.Size(92, 52);
@@ -318,6 +341,7 @@ namespace Basic_Digital_Calculator
             // 
             // EqualsButton
             // 
+            this.EqualsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EqualsButton.Location = new System.Drawing.Point(297, 293);
             this.EqualsButton.Name = "EqualsButton";
             this.EqualsButton.Size = new System.Drawing.Size(94, 52);
