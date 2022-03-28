@@ -13,7 +13,8 @@ namespace Basic_Digital_Calculator
     public partial class Form1 : Form
     {
         // string variable to be displayed on Display Panel
-        public string currentEntry = "0"; 
+        public string currentEntry = "0";
+        public string firstEntry;
 
         public Form1()
         {
@@ -23,7 +24,7 @@ namespace Basic_Digital_Calculator
         private void DisplayPanel_Paint(object sender, PaintEventArgs e)
         {
             // Font
-            Font font = new Font("Microsoft Sans Serif", 30);
+            Font font = new Font("Microsoft Sans Serif", 26);
 
             // String Format
             StringFormat stringFormat = new StringFormat();
@@ -40,70 +41,80 @@ namespace Basic_Digital_Calculator
         // "1" Button 
         private void OneButton_Click(object sender, EventArgs e)
         {
-            currentEntry += "1";
+            if(currentEntry.Length < 19)
+                currentEntry += "1";
             DisplayPanel.Invalidate(); // refresh screen to update
         }
 
         // "0" Button
         private void ZeroButton_Click(object sender, EventArgs e)
         {
-            currentEntry += "0";
+            if (currentEntry.Length < 19)
+                currentEntry += "0";
             DisplayPanel.Invalidate(); // refresh screen to update
         }
 
         // "2" Button 
         private void TwoButton_Click(object sender, EventArgs e)
         {
-            currentEntry += "2";
+            if (currentEntry.Length < 19)
+                currentEntry += "2";
             DisplayPanel.Invalidate(); // refresh screen to update
         }
 
         // "3" Button
         private void ThreeButton_Click(object sender, EventArgs e)
         {
-            currentEntry += "3";
+            if (currentEntry.Length < 19)
+                currentEntry += "3";
             DisplayPanel.Invalidate(); // refresh screen to update
         }
 
         // "4" Button
         private void FourButton_Click(object sender, EventArgs e)
         {
-            currentEntry += "4";
+            if (currentEntry.Length < 19)
+                currentEntry += "4";
             DisplayPanel.Invalidate(); // refresh screen to update
         }
 
         // "5" Button
         private void FiveButton_Click(object sender, EventArgs e)
         {
-            currentEntry += "5";
+            if (currentEntry.Length < 19)
+                currentEntry += "5";
             DisplayPanel.Invalidate(); // refresh screen to update
         }
 
         // "6" Button
         private void SixButton_Click(object sender, EventArgs e)
         {
-            currentEntry += "6";
+            if (currentEntry.Length < 19)
+                currentEntry += "6";
             DisplayPanel.Invalidate(); // refresh screen to update
         }
 
         // "7" Button
         private void SevenButton_Click(object sender, EventArgs e)
         {
-            currentEntry += "7";
+            if (currentEntry.Length < 19)
+                currentEntry += "7";
             DisplayPanel.Invalidate(); // refresh screen to update
         }
 
         // "8" Button
         private void EightButton_Click(object sender, EventArgs e)
         {
-            currentEntry += "8";
+            if (currentEntry.Length < 19)
+                currentEntry += "8";
             DisplayPanel.Invalidate(); // refresh screen to update
         }
 
         // "9" Button
         private void NineButton_Click(object sender, EventArgs e)
         {
-            currentEntry += "9";
+            if (currentEntry.Length < 19)
+                currentEntry += "9";
             DisplayPanel.Invalidate(); // refresh screen to update
         }
     }
