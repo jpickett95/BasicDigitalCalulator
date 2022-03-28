@@ -1,0 +1,10 @@
+C:\Users\jpick\source\repos\BasicDigitalCalulator\Basic Digital Calculator\Basic Digital Calculator\bin\Debug\Basic Digital Calculator.exe.config
+C:\Users\jpick\source\repos\BasicDigitalCalulator\Basic Digital Calculator\Basic Digital Calculator\bin\Debug\Basic Digital Calculator.exe
+C:\Users\jpick\source\repos\BasicDigitalCalulator\Basic Digital Calculator\Basic Digital Calculator\bin\Debug\Basic Digital Calculator.pdb
+C:\Users\jpick\source\repos\BasicDigitalCalulator\Basic Digital Calculator\Basic Digital Calculator\obj\Debug\Basic Digital Calculator.csproj.AssemblyReference.cache
+C:\Users\jpick\source\repos\BasicDigitalCalulator\Basic Digital Calculator\Basic Digital Calculator\obj\Debug\Basic_Digital_Calculator.Form1.resources
+C:\Users\jpick\source\repos\BasicDigitalCalulator\Basic Digital Calculator\Basic Digital Calculator\obj\Debug\Basic_Digital_Calculator.Properties.Resources.resources
+C:\Users\jpick\source\repos\BasicDigitalCalulator\Basic Digital Calculator\Basic Digital Calculator\obj\Debug\Basic Digital Calculator.csproj.GenerateResource.cache
+C:\Users\jpick\source\repos\BasicDigitalCalulator\Basic Digital Calculator\Basic Digital Calculator\obj\Debug\Basic Digital Calculator.csproj.CoreCompileInputs.cache
+C:\Users\jpick\source\repos\BasicDigitalCalulator\Basic Digital Calculator\Basic Digital Calculator\obj\Debug\Basic Digital Calculator.exe
+C:\Users\jpick\source\repos\BasicDigitalCalulator\Basic Digital Calculator\Basic Digital Calculator\obj\Debug\Basic Digital Calculator.pdb
