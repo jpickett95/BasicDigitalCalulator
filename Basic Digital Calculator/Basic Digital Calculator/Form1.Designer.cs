@@ -29,6 +29,7 @@ namespace Basic_Digital_Calculator
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.ButtonsPanel = new System.Windows.Forms.TableLayoutPanel();
             this.DisplayPanel = new System.Windows.Forms.Panel();
             this.ModuloDivsionButton = new System.Windows.Forms.Button();
@@ -141,12 +142,13 @@ namespace Basic_Digital_Calculator
             // 
             // DeleteButton
             // 
+            this.DeleteButton.AccessibleName = "Delete";
             this.DeleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteButton.Image = ((System.Drawing.Image)(resources.GetObject("DeleteButton.Image")));
             this.DeleteButton.Location = new System.Drawing.Point(297, 3);
             this.DeleteButton.Name = "DeleteButton";
             this.DeleteButton.Size = new System.Drawing.Size(94, 52);
             this.DeleteButton.TabIndex = 3;
-            this.DeleteButton.Text = "Del";
             this.DeleteButton.UseVisualStyleBackColor = true;
             // 
             // OneDividedByEntryButton
