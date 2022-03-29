@@ -362,6 +362,7 @@ namespace Basic_Digital_Calculator
             this.EqualsButton.TabIndex = 23;
             this.EqualsButton.Text = "=";
             this.EqualsButton.UseVisualStyleBackColor = true;
+            this.EqualsButton.Click += new System.EventHandler(this.EqualsButton_Click);
             // 
             // DisplayPanel
             // 

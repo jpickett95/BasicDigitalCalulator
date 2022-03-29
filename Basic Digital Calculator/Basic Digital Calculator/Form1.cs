@@ -27,12 +27,12 @@ namespace Basic_Digital_Calculator
             // Font
             Font font = new Font("Microsoft Sans Serif", 26);
 
-            // String Format
+            // String Formatting
             StringFormat stringFormat = new StringFormat();
             stringFormat.Alignment = StringAlignment.Far;
             stringFormat.LineAlignment = StringAlignment.Far;
 
-            // Number Format
+            // Number Formatting
             NumberFormatInfo nfi = new NumberFormatInfo();
             nfi.NumberDecimalDigits = 0;
             nfi.NegativeSign = "-";
@@ -165,6 +165,31 @@ namespace Basic_Digital_Calculator
             firstEntry = currentEntry;
             currentEntry = "0";
             currentFunction = 1;
+            DisplayPanel.Invalidate();
+        }
+
+        // Equals Button
+        private void EqualsButton_Click(object sender, EventArgs e)
+        {
+            // Number Formatting
+            NumberFormatInfo nfi = new NumberFormatInfo();
+            nfi.NumberDecimalDigits = 0;
+            nfi.NegativeSign = "-";
+            nfi.NumberNegativePattern = 1;
+            nfi.NumberGroupSeparator = "";
+
+            switch (currentFunction)
+            {
+                case 1: // Addition
+                    // convert first entry
+                    double first = double.Parse(firstEntry, NumberStyles.AllowLeadingSign | NumberStyles.AllowDecimalPoint | NumberStyles.AllowTrailingSign, nfi);
+                    // convert second entry
+                    double second = double.Parse(currentEntry, NumberStyles.AllowLeadingSign | NumberStyles.AllowDecimalPoint | NumberStyles.AllowTrailingSign, nfi);
+                    double answer = first + second; // calculate answer
+                    currentEntry = answer.ToString("N", nfi); // convert answer to string
+                    DisplayPanel.Invalidate(); // refresh display to update
+                    break;
+            }
         }
     }
 }
