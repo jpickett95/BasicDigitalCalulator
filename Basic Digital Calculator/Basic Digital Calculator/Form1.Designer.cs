@@ -59,6 +59,7 @@ namespace Basic_Digital_Calculator
             this.DisplayPanel = new System.Windows.Forms.Panel();
             this.FormulaStatusStrip = new System.Windows.Forms.StatusStrip();
             this.DeleteToolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.CEToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.ButtonsPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -123,6 +124,7 @@ namespace Basic_Digital_Calculator
             this.ClearEntryButton.Size = new System.Drawing.Size(92, 51);
             this.ClearEntryButton.TabIndex = 1;
             this.ClearEntryButton.Text = "CE";
+            this.CEToolTip.SetToolTip(this.ClearEntryButton, "Clear Entry\r\n");
             this.ClearEntryButton.UseVisualStyleBackColor = true;
             this.ClearEntryButton.Click += new System.EventHandler(this.ClearEntryButton_Click);
             // 
@@ -431,6 +433,7 @@ namespace Basic_Digital_Calculator
         private System.Windows.Forms.Panel DisplayPanel;
         private System.Windows.Forms.StatusStrip FormulaStatusStrip;
         private System.Windows.Forms.ToolTip DeleteToolTip;
+        private System.Windows.Forms.ToolTip CEToolTip;
     }
 }
 
