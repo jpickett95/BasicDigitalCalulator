@@ -155,7 +155,7 @@ namespace Basic_Digital_Calculator
         // Delete Button
         private void DeleteButton_Click(object sender, EventArgs e)
         {
-            currentEntry = "0"; // reset current entry to 0
+            currentEntry = currentEntry.Remove(currentEntry.Length - 1); // removes last character entered
             DisplayPanel.Invalidate();
         }
 
