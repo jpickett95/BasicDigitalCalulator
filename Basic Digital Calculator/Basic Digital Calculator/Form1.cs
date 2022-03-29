@@ -180,6 +180,8 @@ namespace Basic_Digital_Calculator
 
             switch (currentFunction)
             {
+                case 0:
+                    break;
                 case 1: // Addition
                     // convert first entry
                     if (firstEntry.IndexOf(".") != -1) // count decimal digits
@@ -234,6 +236,15 @@ namespace Basic_Digital_Calculator
         private void ClearEntryButton_Click(object sender, EventArgs e)
         {
             currentEntry = "0"; // resets current entry to 0
+            DisplayPanel.Invalidate();
+        }
+
+        // Clear Button
+        private void ClearButton_Click(object sender, EventArgs e)
+        {
+            currentEntry = "0"; // resets current entry to 0
+            firstEntry = null; // resets first entry to null
+            currentFunction = 0; // resets current function
             DisplayPanel.Invalidate();
         }
     }
