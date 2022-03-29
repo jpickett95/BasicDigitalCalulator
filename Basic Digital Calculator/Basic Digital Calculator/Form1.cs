@@ -146,7 +146,7 @@ namespace Basic_Digital_Calculator
         // "." Button
         private void PeriodButton_Click(object sender, EventArgs e)
         {
-            if (currentEntry.Length < 19)
+            if (currentEntry.Length < 16)
                 currentEntry += ".";
             DisplayPanel.Invalidate(); // refresh screen to update
         }
