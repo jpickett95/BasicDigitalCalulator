@@ -229,5 +229,12 @@ namespace Basic_Digital_Calculator
             currentFunction = 2;
             DisplayPanel.Invalidate();
         }
+
+        // Clear Entry Button
+        private void ClearEntryButton_Click(object sender, EventArgs e)
+        {
+            currentEntry = "0"; // resets current entry to 0
+            DisplayPanel.Invalidate();
+        }
     }
 }

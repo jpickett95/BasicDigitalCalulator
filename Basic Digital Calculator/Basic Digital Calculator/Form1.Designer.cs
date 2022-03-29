@@ -124,6 +124,7 @@ namespace Basic_Digital_Calculator
             this.ClearEntryButton.TabIndex = 1;
             this.ClearEntryButton.Text = "CE";
             this.ClearEntryButton.UseVisualStyleBackColor = true;
+            this.ClearEntryButton.Click += new System.EventHandler(this.ClearEntryButton_Click);
             // 
             // ClearButton
             // 
