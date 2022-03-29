@@ -150,5 +150,18 @@ namespace Basic_Digital_Calculator
                 currentEntry += ".";
             DisplayPanel.Invalidate(); // refresh screen to update
         }
+
+        // Delete Button
+        private void DeleteButton_Click(object sender, EventArgs e)
+        {
+            currentEntry = "0"; // reset current entry to 0
+            DisplayPanel.Invalidate();
+        }
+
+        // Add Button
+        private void AddButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

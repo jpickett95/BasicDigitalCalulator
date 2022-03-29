@@ -148,6 +148,7 @@ namespace Basic_Digital_Calculator
             this.DeleteButton.Tag = "Delete";
             this.DeleteToolTip.SetToolTip(this.DeleteButton, "Delete");
             this.DeleteButton.UseVisualStyleBackColor = true;
+            this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
             // 
             // OneDividedByEntryButton
             // 
@@ -317,6 +318,7 @@ namespace Basic_Digital_Calculator
             this.AddButton.TabIndex = 19;
             this.AddButton.Text = "+";
             this.AddButton.UseVisualStyleBackColor = true;
+            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
             // NegateButton
             // 
