@@ -275,6 +275,7 @@ namespace Basic_Digital_Calculator
             this.SubtractButton.TabIndex = 15;
             this.SubtractButton.Text = "-";
             this.SubtractButton.UseVisualStyleBackColor = true;
+            this.SubtractButton.Click += new System.EventHandler(this.SubtractButton_Click);
             // 
             // OneButton
             // 

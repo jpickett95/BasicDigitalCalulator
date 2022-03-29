@@ -199,7 +199,18 @@ namespace Basic_Digital_Calculator
                     currentEntry = answer.ToString(); // convert answer to string
                     DisplayPanel.Invalidate(); // refresh display to update
                     break;
+                case 2: // Subtraction
+                    break;
             }
+        }
+
+        // Subtract Button
+        private void SubtractButton_Click(object sender, EventArgs e)
+        {
+            firstEntry = currentEntry;
+            currentEntry = "0";
+            currentFunction = 2;
+            DisplayPanel.Invalidate();
         }
     }
 }
