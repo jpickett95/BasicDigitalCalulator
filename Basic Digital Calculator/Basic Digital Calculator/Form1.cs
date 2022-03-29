@@ -49,6 +49,10 @@ namespace Basic_Digital_Calculator
                 nfi.NumberDecimalDigits = decimaldigits - 1;
             }
 
+            // change to scientific notation if over 16 digits - "G"
+            //if (currentEntry.Length > 16)
+                //e.Graphics.DrawString(entryToDub.ToString("G", nfi), font, Brushes.Black, DisplayPanel.ClientRectangle, stringFormat);
+
             // Print current entry as a number to the screen
             e.Graphics.DrawString(entryToDub.ToString("N", nfi), font, Brushes.Black, DisplayPanel.ClientRectangle, stringFormat);
             
