@@ -15,6 +15,7 @@ namespace Basic_Digital_Calculator
     {       
         public string currentEntry = "0"; // string variable to be displayed on Display Panel
         public string firstEntry; // variable to store first entry before clearing for second entry
+        public int currentFunction; // used for Equals Function
 
         public Form1()
         {
@@ -161,7 +162,9 @@ namespace Basic_Digital_Calculator
         // Add Button
         private void AddButton_Click(object sender, EventArgs e)
         {
-
+            firstEntry = currentEntry;
+            currentEntry = "0";
+            currentFunction = 1;
         }
     }
 }
