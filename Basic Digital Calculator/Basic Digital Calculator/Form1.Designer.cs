@@ -60,6 +60,7 @@ namespace Basic_Digital_Calculator
             this.FormulaStatusStrip = new System.Windows.Forms.StatusStrip();
             this.DeleteToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.CEToolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.CToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.ButtonsPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -136,6 +137,7 @@ namespace Basic_Digital_Calculator
             this.ClearButton.Size = new System.Drawing.Size(92, 51);
             this.ClearButton.TabIndex = 2;
             this.ClearButton.Text = "C";
+            this.CToolTip.SetToolTip(this.ClearButton, "Clear");
             this.ClearButton.UseVisualStyleBackColor = true;
             // 
             // DeleteButton
@@ -434,6 +436,7 @@ namespace Basic_Digital_Calculator
         private System.Windows.Forms.StatusStrip FormulaStatusStrip;
         private System.Windows.Forms.ToolTip DeleteToolTip;
         private System.Windows.Forms.ToolTip CEToolTip;
+        private System.Windows.Forms.ToolTip CToolTip;
     }
 }
 
