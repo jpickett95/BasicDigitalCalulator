@@ -147,7 +147,7 @@ namespace Basic_Digital_Calculator
         // "." Button
         private void PeriodButton_Click(object sender, EventArgs e)
         {
-            if (currentEntry.Length < 16)
+            if (currentEntry.Length < 16 && currentEntry.Contains('.') == false)
                 currentEntry += ".";
             DisplayPanel.Invalidate(); // refresh screen to update
         }
@@ -182,11 +182,21 @@ namespace Basic_Digital_Calculator
             {
                 case 1: // Addition
                     // convert first entry
+                    if (firstEntry.IndexOf(".") != -1) // count decimal digits
+                    {
+                        int decimaldigits = firstEntry.Substring(firstEntry.IndexOf(".")).Length;
+                        nfi.NumberDecimalDigits = decimaldigits - 1;
+                    }
                     double first = double.Parse(firstEntry, NumberStyles.AllowLeadingSign | NumberStyles.AllowDecimalPoint | NumberStyles.AllowTrailingSign, nfi);
                     // convert second entry
+                    if (currentEntry.IndexOf(".") != -1) // count decimal digits
+                    {
+                        int decimaldigits = currentEntry.Substring(currentEntry.IndexOf(".")).Length;
+                        nfi.NumberDecimalDigits = decimaldigits - 1;
+                    }
                     double second = double.Parse(currentEntry, NumberStyles.AllowLeadingSign | NumberStyles.AllowDecimalPoint | NumberStyles.AllowTrailingSign, nfi);
-                    double answer = first + second; // calculate answer
-                    currentEntry = answer.ToString("N", nfi); // convert answer to string
+                    double answer = first + second; // calculate answer                    
+                    currentEntry = answer.ToString(); // convert answer to string
                     DisplayPanel.Invalidate(); // refresh display to update
                     break;
             }
