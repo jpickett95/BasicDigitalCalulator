@@ -187,19 +187,36 @@ namespace Basic_Digital_Calculator
                         int decimaldigits = firstEntry.Substring(firstEntry.IndexOf(".")).Length;
                         nfi.NumberDecimalDigits = decimaldigits - 1;
                     }
-                    double first = double.Parse(firstEntry, NumberStyles.AllowLeadingSign | NumberStyles.AllowDecimalPoint | NumberStyles.AllowTrailingSign, nfi);
+                    double firstAdd = double.Parse(firstEntry, NumberStyles.AllowLeadingSign | NumberStyles.AllowDecimalPoint | NumberStyles.AllowTrailingSign, nfi);
                     // convert second entry
                     if (currentEntry.IndexOf(".") != -1) // count decimal digits
                     {
                         int decimaldigits = currentEntry.Substring(currentEntry.IndexOf(".")).Length;
                         nfi.NumberDecimalDigits = decimaldigits - 1;
                     }
-                    double second = double.Parse(currentEntry, NumberStyles.AllowLeadingSign | NumberStyles.AllowDecimalPoint | NumberStyles.AllowTrailingSign, nfi);
-                    double answer = first + second; // calculate answer                    
-                    currentEntry = answer.ToString(); // convert answer to string
+                    double secondAdd = double.Parse(currentEntry, NumberStyles.AllowLeadingSign | NumberStyles.AllowDecimalPoint | NumberStyles.AllowTrailingSign, nfi);
+                    double additionAnswer = firstAdd + secondAdd; // calculate answer                    
+                    currentEntry = additionAnswer.ToString(); // convert answer to string
                     DisplayPanel.Invalidate(); // refresh display to update
                     break;
                 case 2: // Subtraction
+                    // convert first entry
+                    if (firstEntry.IndexOf(".") != -1) // count decimal digits
+                    {
+                        int decimaldigits = firstEntry.Substring(firstEntry.IndexOf(".")).Length;
+                        nfi.NumberDecimalDigits = decimaldigits - 1;
+                    }
+                    double firstSub = double.Parse(firstEntry, NumberStyles.AllowLeadingSign | NumberStyles.AllowDecimalPoint | NumberStyles.AllowTrailingSign, nfi);
+                    // convert second entry
+                    if (currentEntry.IndexOf(".") != -1) // count decimal digits
+                    {
+                        int decimaldigits = currentEntry.Substring(currentEntry.IndexOf(".")).Length;
+                        nfi.NumberDecimalDigits = decimaldigits - 1;
+                    }
+                    double secondSub = double.Parse(currentEntry, NumberStyles.AllowLeadingSign | NumberStyles.AllowDecimalPoint | NumberStyles.AllowTrailingSign, nfi);
+                    double subtractionAnswer = firstSub - secondSub; // calculate answer                    
+                    currentEntry = subtractionAnswer.ToString(); // convert answer to string
+                    DisplayPanel.Invalidate(); // refresh display to update
                     break;
             }
         }
