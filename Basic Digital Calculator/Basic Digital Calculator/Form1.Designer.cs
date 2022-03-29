@@ -327,6 +327,7 @@ namespace Basic_Digital_Calculator
             this.NegateButton.TabIndex = 20;
             this.NegateButton.Text = "+/-";
             this.NegateButton.UseVisualStyleBackColor = true;
+            this.NegateButton.Click += new System.EventHandler(this.NegateButton_Click);
             // 
             // ZeroButton
             // 
@@ -348,6 +349,7 @@ namespace Basic_Digital_Calculator
             this.PeriodButton.TabIndex = 22;
             this.PeriodButton.Text = ".";
             this.PeriodButton.UseVisualStyleBackColor = true;
+            this.PeriodButton.Click += new System.EventHandler(this.PeriodButton_Click);
             // 
             // EqualsButton
             // 

@@ -7,14 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;
 
 namespace Basic_Digital_Calculator
 {
     public partial class Form1 : Form
-    {
-        // string variable to be displayed on Display Panel
-        public string currentEntry = "0";
-        public string firstEntry;
+    {       
+        public string currentEntry = "0"; // string variable to be displayed on Display Panel
+        public string firstEntry; // variable to store first entry before clearing for second entry
 
         public Form1()
         {
@@ -31,17 +31,32 @@ namespace Basic_Digital_Calculator
             stringFormat.Alignment = StringAlignment.Far;
             stringFormat.LineAlignment = StringAlignment.Far;
 
-            // Convert string variable to long to drop '0's in beginning
-            long entryToLong = long.Parse(currentEntry);
+            // Number Format
+            NumberFormatInfo nfi = new NumberFormatInfo();
+            nfi.NumberDecimalDigits = 0;
+            nfi.NegativeSign = "-";
+            nfi.NumberNegativePattern = 1;
+            nfi.NumberGroupSeparator = "";
+
+            // Convert string variable to double to drop '0's in beginning
+            double entryToDub = double.Parse(currentEntry, NumberStyles.AllowLeadingSign | NumberStyles.AllowDecimalPoint | NumberStyles.AllowTrailingSign, nfi);
+
+            // Display decimal digits
+            if (currentEntry.IndexOf(".") != -1)
+            {
+                int decimaldigits = currentEntry.Substring(currentEntry.IndexOf(".")).Length;
+                nfi.NumberDecimalDigits = decimaldigits - 1;
+            }
 
             // Print current entry as a number to the screen
-            e.Graphics.DrawString(entryToLong.ToString(), font, Brushes.Black, DisplayPanel.ClientRectangle, stringFormat);
+            e.Graphics.DrawString(entryToDub.ToString("N", nfi), font, Brushes.Black, DisplayPanel.ClientRectangle, stringFormat);
+            
         }
 
         // "1" Button 
         private void OneButton_Click(object sender, EventArgs e)
         {
-            if(currentEntry.Length < 19)
+            if(currentEntry.Length < 16)
                 currentEntry += "1";
             DisplayPanel.Invalidate(); // refresh screen to update
         }
@@ -49,7 +64,7 @@ namespace Basic_Digital_Calculator
         // "0" Button
         private void ZeroButton_Click(object sender, EventArgs e)
         {
-            if (currentEntry.Length < 19)
+            if (currentEntry.Length < 16)
                 currentEntry += "0";
             DisplayPanel.Invalidate(); // refresh screen to update
         }
@@ -57,7 +72,7 @@ namespace Basic_Digital_Calculator
         // "2" Button 
         private void TwoButton_Click(object sender, EventArgs e)
         {
-            if (currentEntry.Length < 19)
+            if (currentEntry.Length < 16)
                 currentEntry += "2";
             DisplayPanel.Invalidate(); // refresh screen to update
         }
@@ -65,7 +80,7 @@ namespace Basic_Digital_Calculator
         // "3" Button
         private void ThreeButton_Click(object sender, EventArgs e)
         {
-            if (currentEntry.Length < 19)
+            if (currentEntry.Length < 16)
                 currentEntry += "3";
             DisplayPanel.Invalidate(); // refresh screen to update
         }
@@ -73,7 +88,7 @@ namespace Basic_Digital_Calculator
         // "4" Button
         private void FourButton_Click(object sender, EventArgs e)
         {
-            if (currentEntry.Length < 19)
+            if (currentEntry.Length < 16)
                 currentEntry += "4";
             DisplayPanel.Invalidate(); // refresh screen to update
         }
@@ -81,7 +96,7 @@ namespace Basic_Digital_Calculator
         // "5" Button
         private void FiveButton_Click(object sender, EventArgs e)
         {
-            if (currentEntry.Length < 19)
+            if (currentEntry.Length < 16)
                 currentEntry += "5";
             DisplayPanel.Invalidate(); // refresh screen to update
         }
@@ -89,7 +104,7 @@ namespace Basic_Digital_Calculator
         // "6" Button
         private void SixButton_Click(object sender, EventArgs e)
         {
-            if (currentEntry.Length < 19)
+            if (currentEntry.Length < 16)
                 currentEntry += "6";
             DisplayPanel.Invalidate(); // refresh screen to update
         }
@@ -97,7 +112,7 @@ namespace Basic_Digital_Calculator
         // "7" Button
         private void SevenButton_Click(object sender, EventArgs e)
         {
-            if (currentEntry.Length < 19)
+            if (currentEntry.Length < 16)
                 currentEntry += "7";
             DisplayPanel.Invalidate(); // refresh screen to update
         }
@@ -105,7 +120,7 @@ namespace Basic_Digital_Calculator
         // "8" Button
         private void EightButton_Click(object sender, EventArgs e)
         {
-            if (currentEntry.Length < 19)
+            if (currentEntry.Length < 16)
                 currentEntry += "8";
             DisplayPanel.Invalidate(); // refresh screen to update
         }
@@ -113,8 +128,26 @@ namespace Basic_Digital_Calculator
         // "9" Button
         private void NineButton_Click(object sender, EventArgs e)
         {
-            if (currentEntry.Length < 19)
+            if (currentEntry.Length < 16)
                 currentEntry += "9";
+            DisplayPanel.Invalidate(); // refresh screen to update
+        }
+
+        // "+/-" Button
+        private void NegateButton_Click(object sender, EventArgs e)
+        {           
+            if (currentEntry[0] == '-') // Check if number is negative
+                currentEntry = currentEntry.Remove(0, 1); // remove negative symbol, if negative
+            else
+                currentEntry = "-" + currentEntry; // add negative symbol, if positive
+            DisplayPanel.Invalidate(); // refresh screen to update
+        }
+
+        // "." Button
+        private void PeriodButton_Click(object sender, EventArgs e)
+        {
+            if (currentEntry.Length < 19)
+                currentEntry += ".";
             DisplayPanel.Invalidate(); // refresh screen to update
         }
     }
