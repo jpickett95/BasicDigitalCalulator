@@ -40,7 +40,7 @@ namespace Basic_Digital_Calculator
             nfi.NumberGroupSeparator = "";
 
             // Convert string variable to double to drop '0's in beginning
-            double entryToDub = double.Parse(currentEntry, NumberStyles.AllowLeadingSign | NumberStyles.AllowDecimalPoint | NumberStyles.AllowTrailingSign, nfi);
+            double entryToDub = double.Parse(currentEntry, NumberStyles.AllowLeadingSign | NumberStyles.AllowDecimalPoint | NumberStyles.AllowTrailingSign | NumberStyles.AllowExponent, nfi);
 
             // Display decimal digits
             if (currentEntry.IndexOf(".") != -1)
@@ -50,11 +50,11 @@ namespace Basic_Digital_Calculator
             }
 
             // change to scientific notation if over 16 digits - "G"
-            //if (currentEntry.Length > 16)
-                //e.Graphics.DrawString(entryToDub.ToString("G", nfi), font, Brushes.Black, DisplayPanel.ClientRectangle, stringFormat);
-
+            if (currentEntry.Length > 16)
+                e.Graphics.DrawString(entryToDub.ToString("G", nfi), font, Brushes.Black, DisplayPanel.ClientRectangle, stringFormat);            
             // Print current entry as a number to the screen
-            e.Graphics.DrawString(entryToDub.ToString("N", nfi), font, Brushes.Black, DisplayPanel.ClientRectangle, stringFormat);
+            else
+                e.Graphics.DrawString(entryToDub.ToString("N", nfi), font, Brushes.Black, DisplayPanel.ClientRectangle, stringFormat);
             
         }
 
@@ -193,16 +193,16 @@ namespace Basic_Digital_Calculator
                         int decimaldigits = firstEntry.Substring(firstEntry.IndexOf(".")).Length;
                         nfi.NumberDecimalDigits = decimaldigits - 1;
                     }
-                    double firstAdd = double.Parse(firstEntry, NumberStyles.AllowLeadingSign | NumberStyles.AllowDecimalPoint | NumberStyles.AllowTrailingSign, nfi);
+                    double firstAdd = double.Parse(firstEntry, NumberStyles.AllowLeadingSign | NumberStyles.AllowDecimalPoint | NumberStyles.AllowTrailingSign | NumberStyles.AllowExponent, nfi);
                     // convert second entry
                     if (currentEntry.IndexOf(".") != -1) // count decimal digits
                     {
                         int decimaldigits = currentEntry.Substring(currentEntry.IndexOf(".")).Length;
                         nfi.NumberDecimalDigits = decimaldigits - 1;
                     }
-                    double secondAdd = double.Parse(currentEntry, NumberStyles.AllowLeadingSign | NumberStyles.AllowDecimalPoint | NumberStyles.AllowTrailingSign, nfi);
+                    double secondAdd = double.Parse(currentEntry, NumberStyles.AllowLeadingSign | NumberStyles.AllowDecimalPoint | NumberStyles.AllowTrailingSign | NumberStyles.AllowExponent, nfi);
                     double additionAnswer = firstAdd + secondAdd; // calculate answer                    
-                    currentEntry = additionAnswer.ToString(); // convert answer to string
+                    currentEntry = additionAnswer.ToString("G"); // convert answer to string
                     DisplayPanel.Invalidate(); // refresh display to update
                     break;
                 case 2: // Subtraction
